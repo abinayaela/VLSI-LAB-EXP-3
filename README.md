@@ -1,23 +1,26 @@
 SIMULATION AND IMPLEMENTATION OF MULTIPLIER
 **AIM: **
- To simulate and synthesis multiplier using Xilinx ISE.
+To simulate and synthesis multiplier using vivado 2023.2
+ 
 
 **APPARATUS REQUIRED:**
-Xilinx 14.7
-Spartan6 FPGA
+vivado 2023.2 Spartan7 FPGA
   
 **PROCEDURE:**
-STEP:1  Start  the Xilinx navigator, Select and Name the New project.
-STEP:2  Select the device family, device, package and speed.       
-STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
-STEP:4  Type the File Name and Click Next and then finish button. Type the code and save it.
-STEP:5  Select the Behavioral Simulation in the Source Window and click the check syntax.                       
-STEP:6  Click the simulation to simulate the program and  give the inputs and verify the outputs as per the truth table.               
-STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
-STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
-STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+STEP:1 Start the vivado software, Select and Name the New project.
+
+STEP:2 Select the device family, device, package and speed.
+
+STEP:3 Select new source in the New Project and select Verilog Module as the Source type.
+
+STEP:4 Type the File Name and module name and Click Next and then finish button. Type the code and save it.
+
+STEP:5 Select the run simulation adn then run Behavioral Simulation in the Source Window and click the check syntax.
+
+STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
+
+STEP:7 compare the output with truth table.
+
 
 **Logic Diagram**
 2 bit Multiplier
@@ -31,9 +34,8 @@ STEP:11  On the board, by giving required input, the LEDs starts to glow light, 
 
 **Verilog code**
 
-2 bit multiplier:
+2 bit Multiplier
 
-```h
 module ha(a,b,sum,c);
 
 input a,b;
@@ -61,16 +63,8 @@ ha ha1(a[0]&b[1],a[1]&b[0],c[1],w1);
 ha ha2(a[1] &b[1],w1,c[2],c[3]);
 
 endmodule
-```
+4 Bit Multiplier
 
-**Output Waveform**
-
-![image](https://github.com/abinayaela/VLSI-LAB-EXP-3/assets/164911294/84bbbf9a-728e-40d2-8383-5e85212f00be)
-
-verilog code:
-
-4 bit multiplier:
-```h
 module ha(a,b,c,s);
 
 input a,b;
@@ -139,12 +133,22 @@ fa fa8(w[11],x[3]&y[3],w[17],z[6],z[7]);
 
 endmodule
 
-output waveform:
-![image](https://github.com/abinayaela/VLSI-LAB-EXP-3/assets/164911294/cf7bf24e-3b58-4b84-9eb8-272ce6fae745)
+Output Waveform
+
+2 bit Multiplier
+
+![image](https://github.com/abinayaela/VLSI-LAB-EXP-3/assets/164911294/0eeebc7f-e2e3-4e85-b2fb-429b663ee312)
+
+4 Bit Multiplier
+
+![image](https://github.com/abinayaela/VLSI-LAB-EXP-3/assets/164911294/c8e57768-bdba-4225-a3b8-0b9b003f4241)
+
+
 
 
 
 **Result**
 
- Thus,the simulation and synthesis of multipliers by using vivado has been successfully excecuted and verified.
+ Thus the simulatation and synthesis of multiplier using vivado 2023.2 was successfully executed and verified.
+
 
