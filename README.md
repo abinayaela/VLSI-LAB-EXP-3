@@ -1,5 +1,7 @@
 SIMULATION AND IMPLEMENTATION OF MULTIPLIER
-**AIM: **
+
+**AIM**
+
 To simulate and synthesis multiplier using vivado 2023.2
  
 
@@ -7,6 +9,7 @@ To simulate and synthesis multiplier using vivado 2023.2
 vivado 2023.2 Spartan7 FPGA
   
 **PROCEDURE:**
+
 STEP:1 Start the vivado software, Select and Name the New project.
 
 STEP:2 Select the device family, device, package and speed.
@@ -34,7 +37,7 @@ STEP:7 compare the output with truth table.
 
 **Verilog code**
 
-2 bit Multiplier
+**2 bit Multiplier**
 
 module ha(a,b,sum,c);
 
@@ -63,7 +66,8 @@ ha ha1(a[0]&b[1],a[1]&b[0],c[1],w1);
 ha ha2(a[1] &b[1],w1,c[2],c[3]);
 
 endmodule
-4 Bit Multiplier
+
+**4 Bit Multiplier**
 
 module ha(a,b,c,s);
 
@@ -133,7 +137,7 @@ fa fa8(w[11],x[3]&y[3],w[17],z[6],z[7]);
 
 endmodule
 
-Output Waveform
+**Output Waveform**
 
 2 bit Multiplier
 
